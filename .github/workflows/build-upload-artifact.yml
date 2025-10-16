@@ -36,7 +36,7 @@ jobs:
       
       # Uploads the build output as a GitHub artifact
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Build
           path: build
