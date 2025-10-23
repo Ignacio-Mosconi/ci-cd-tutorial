@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -10,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController characterController;
     private float currentJumpSpeed;
+
+    public event Action OnJumped;
 
 
     void Start ()
@@ -59,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
         {
             currentJumpSpeed = jumpSpeed;
             hasJustJumped = true;
+
+            OnJumped?.Invoke();
         }
 
         motion = new Vector3(0f, currentJumpSpeed * Time.deltaTime, 0f);

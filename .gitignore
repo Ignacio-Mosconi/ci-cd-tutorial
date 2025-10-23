@@ -71,3 +71,19 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Wwise
+.backup
+.cache
+*.akd
+*.validationcache
+*.wsettings
+*.wem
+*.prof
+WwiseUnityIntegration_*_Src.zip
+/[Aa]ssets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+*WwiseProject/GeneratedSoundBanks/
+/[Aa]ssets/Wwise/Documentation.meta
+/[Aa]ssets/Wwise/Documentation/*
+/[Aa]ssets/Wwise/API/Runtime/Plugins.meta
+/[Aa]ssets/Wwise/API/Runtime/Plugins/*
