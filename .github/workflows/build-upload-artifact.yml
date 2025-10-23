@@ -33,6 +33,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: StandaloneWindows64
+          versioning: None 
       
       # Uploads the build output as a GitHub artifact
       - name: Upload Artifact
