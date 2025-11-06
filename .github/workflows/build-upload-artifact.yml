@@ -4,21 +4,24 @@ on:
   push:
     branch: main
 
+env:
+  buildName: My-Game
+
 jobs:
   buildAndUploadArtifact:
     name: Build & upload artifact
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
 
       # Checkouts the repository code
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       # Caches library folder for faster build times
       - name: Cache Library
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: Library
           key: Library-${{ matrix.targetPlatform }}
@@ -32,6 +35,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
+          buildName: ${{ env.buildName }}
           targetPlatform: StandaloneWindows64
           versioning: None 
       
@@ -39,5 +43,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Build
+          name: ${{ env.buildName }}
           path: build
