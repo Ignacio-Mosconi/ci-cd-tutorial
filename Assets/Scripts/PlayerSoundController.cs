@@ -22,6 +22,6 @@ public class PlayerSoundController : MonoBehaviour
 
     private void OnJumped ()
     {
-        AkSoundEngine.PostEvent(jumpEvent.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(jumpEvent.Id, gameObject);
     }
 }

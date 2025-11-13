@@ -15,3 +15,4 @@ MonoBehaviour:
   objectName: jump
   id: 3833651337
   guid: B23218E0-4FD0-4726-9FFD-6CFB64F307F2
+  IsInUserDefinedSoundBank: 1

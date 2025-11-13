@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{4CF41F51-D4F2-4298-B3F7-089B3AEFD39F}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{D86F6A7E-E3D9-455B-8D6D-DA3B357CD3DE}" SchemaVersion="123">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{4CF41F51-D4F2-4298-B3F7-089B3AEFD39F}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{D86F6A7E-E3D9-455B-8D6D-DA3B357CD3DE}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="soundbank" ID="{82518F08-AB3E-4B96-8728-798F4B9F3578}">
-					<ObjectInclusionList/>
+				<SoundBank Name="Default_Soundbank" ID="{4CE6135C-7599-4149-B509-6DD79B6C1237}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Player_Jump" ID="{B4D5CD3D-CB51-467D-A35C-AAFCEFC19BD3}" WorkUnitID="{2F640B87-54F8-45B3-94DB-E51215319F17}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
